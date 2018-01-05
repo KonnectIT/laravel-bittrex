@@ -20,5 +20,16 @@
       "Pepijnolivier\\Bittrex\\": "src/"
     }
   },
-  "minimum-stability": "dev"
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "extra": {
+    "laravel": {
+      "providers": [
+        "Pepijnolivier\\Bittrex\\BittrexServiceProvider"
+      ],
+      "aliases": {
+        "Bittrex": "Pepijnolivier\\Bittrex\\Bittrex"
+      }
+    }
+  }
 }
