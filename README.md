@@ -76,5 +76,3 @@ It's also the reason I'm sharing most of the reusable code I write.
 
 If you're feeling generous, you can always leave a tip. Any satoshi will do.
 May the chain be with you. And may you be with the chain.
-
-BTC: `1N5ET46r5Z4HdfhRjGMp7SpEMPes9S1H9n`
