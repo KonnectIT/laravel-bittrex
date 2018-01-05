@@ -11,6 +11,7 @@ interface ClientContract
     public function getOrderBook($market, $type, $depth=20);
     public function getMarketHistory($market);
     public function buyLimit($market, $quantity, $rate);
+    public function TradeBuy($market, $quantity, $rate, $orderType = 'LIMIT', $timeInEffect = 'GOOD_TIL_CANCELED', $conditionType = 'NONE', $target = 0);
     public function sellLimit($market, $quantity, $rate);
     public function cancelOrder($uuid);
     public function getOpenOrders($market=null);

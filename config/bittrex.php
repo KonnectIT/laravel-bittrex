@@ -26,6 +26,7 @@ return [
     'urls' => [
         'public'  => 'https://bittrex.com/api/v1.1/public/',
         'publicv2'  => 'https://bittrex.com/Api/v2.0/pub/',
+        'marketv2'   => 'https://bittrex.com/api/v2.0/auth/market/',
         'market'  => 'https://bittrex.com/api/v1.1/market/',
         'account' => 'https://bittrex.com/api/v1.1/account/',
     ],

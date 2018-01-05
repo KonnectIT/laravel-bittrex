@@ -192,6 +192,33 @@ class Client implements ClientContract
     }
 
     /**
+     * Used to place a buy order in a specific market. Use buylimit to place limit orders.
+     * Make sure you have the proper permissions set on your API keys for this call to work
+     *
+     * @param string       $market   a string literal for the market (ex: BTC-LTC)
+     * @param string|float $quantity the amount to purchase
+     * @param string|float $rate
+     * @param string       $orderType LIMIT | CONDITIONAL
+     * @param string       $timeInEffect
+     * @param string       $conditionType
+     * @param int          $target
+     *
+     * @return array Returns you the order uuid
+     */
+    public function TradeBuy($market, $quantity, $rate, $orderType = 'LIMIT', $timeInEffect = 'GOOD_TIL_CANCELED', $conditionType = 'NONE', $target = 0) {
+        return $this->market('TradeBuy', [
+            'MarketName' => $market,
+            'Quantity' => $quantity,
+            'Rate' => $rate,
+            'OrderType' => $orderType,
+            'TimeInEffect' => $timeInEffect,
+            'ConditionType' => $conditionType,
+            'Target' => $target,
+            '__RequestVerificationToken' => md5(time()),
+        ]);
+    }
+
+    /**
      * Used to place an sell order in a specific market. Use selllimit to place limit orders.
      * Make sure you have the proper permissions set on your API keys for this call to work
      *

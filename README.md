@@ -2,6 +2,14 @@
 
 Start trading on Bittrex right away using your favorite PHP framework.
 
+## Documentation
+
+### v2
+
+Can be found [here](https://github.com/ericsomdahl/python-bittrex/issues/35) or [here](https://github.com/thebotguys/golang-bittrex-api/wiki/Bittrex-API-Reference-(Unofficial)) (better).
+
+No official docs yet.
+
 ### Installation
 
 `composer require pepijnolivier/laravel-bittrex`.
@@ -57,6 +65,9 @@ Bittrex::buyLimit($market, $quantity, $rate);
 Bittrex::sellLimit($market, $quantity, $rate);
 Bittrex::cancelOrder($uuid);
 Bittrex::getOpenOrders($market=null);
+
+// market API 2.0 methods
+Bittrex::TradeBuy($market, $quantity, $rate, $orderType = 'LIMIT', $timeInEffect = 'GOOD_TIL_CANCELED', $conditionType = 'NONE', $target = 0);
 
 // account API methods
 Bittrex::getBalances();
